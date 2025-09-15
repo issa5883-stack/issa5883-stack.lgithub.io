@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issa Elsherife - Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Inter',sans-serif;
+    color:#333;
+    background:#f5f5f5;
+    overflow-x:hidden;
+  }
+
+  /* ===== Hero Section ===== */
+  header{
+    position:relative;
+    text-align:center;
+    padding:100px 20px 150px;
+    background:#fff;
+  }
+  .profile-img{
+    width:180px;height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #e0e0e0;
+    box-shadow:0 0 15px rgba(0,0,0,0.05);
+    animation:pulse 3s infinite alternate;
+  }
+  @keyframes pulse{
+    0%{transform:scale(1);}
+    100%{transform:scale(1.05);}
+  }
+  header h1{
+    font-size:3rem;
+    margin-top:15px;
+    font-weight:600;
+    color:#222;
+  }
+  header p.subtitle{
+    font-size:1.2rem;
+    color:#555;
+  }
+  nav{
+    margin-top:20px;
+  }
+  nav a{
+    margin:0 15px;
+    color:#555;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+  }
+  nav a:hover{color:#00B4D8;}
+
+  /* ===== Waves Background ===== */
+  .waves{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:150px;
+    overflow:hidden;
+    line-height:0;
+  }
+  .wave{
+    position:relative;
+    display:block;
+    width:200%;
+    height:150px;
+    background:rgba(0,180,216,0.08);
+    border-radius:100% 50%;
+    animation:waveAnim 10s infinite linear;
+  }
+  .wave:nth-child(2){
+    animation-delay:-5s;
+    opacity:0.5;
+  }
+  @keyframes waveAnim{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* ===== Section Container ===== */
+  .container{
+    width:80%;
+    max-width:900px;
+    margin:60px auto;
+    padding:30px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.05);
+    opacity:0;transform:translateY(50px);
+    transition:all 1s ease;
+  }
+  .container.show{opacity:1;transform:translateY(0);}
+  .section-title{
+    font-size:2rem;
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:#222;
+    font-weight:600;
+  }
+  .section-title i{color:#00B4D8;font-size:1.5rem;}
+  .section-content{font-size:1.05rem;color:#555;}
+  ul{margin-left:20px;margin-top:10px;font-size:1.05rem;color:#555;}
+
+  /* Skills */
+  .skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:10px;
+  }
+  .skill{
+    background:#f0f0f0;
+    color:#333;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:0.95rem;
+    transition:0.3s;
+  }
+  .skill:hover{
+    background:#00B4D8;
+    color:#fff;
+    transform:scale(1.05);
+  }
+
+  /* Buttons */
+  .buttons-group{
+    text-align:center;
+    margin:40px 0;
+  }
+  .btn{
+    display:inline-block;
+    background:#00B4D8;
+    color:white;
+    padding:12px 25px;
+    margin:0 15px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.3s;
+    text-decoration:none;
+    font-size:1rem;
+  }
+  .btn i{margin-right:8px;}
+  .btn:hover{
+    background:#0090b0;
+    transform:scale(1.05);
+  }
+
+  /* Footer */
+  footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    margin-top:60px;
+    font-size:0.9rem;
+  }
+
+  #dynamic-message{
+    color:#00B4D8;
+    font-weight:500;
+    text-align:center;
+    margin-top:15px;
+    font-size:1rem;
+  }
+
+  @media(max-width:700px){
+    header h1{font-size:2.2rem;}
+    .profile-img{width:150px;height:150px;}
+    .section-title{font-size:1.6rem;}
+    .btn{margin:10px 5px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="c:\Users\AG\Downloads\IMG_9355.jpg" alt="Profile Photo" class="profile-img">
+  <h1>Issa Elsherife</h1>
+  <p class="subtitle">Software Engineer | Data Enthusiast</p>
+  <nav>
+    <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+    <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
+    <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+    <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+  </nav>
+  <div class="waves">
+    <span class="wave"></span>
+    <span class="wave"></span>
+  </div>
+</header>
+
+<div id="about" class="container">
+  <h2 class="section-title"><i class="fa-solid fa-user"></i> About Me</h2>
+  <div class="section-content">
+    Motivated Software Engineering student with experience in building dashboards, chatbots, and data visualization. I love turning data into actionable insights and solving complex problems with elegant solutions.
+  </div>
+</div>
+
+<div id="experience" class="container">
+  <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience</h2>
+  <ul>
+    <li>Tatweer Research Internship (Python, Streamlit, Data Dashboard) — Aug-Sep 2025</li>
+    <li>Developed Chatbot for Wahda Bank</li>
+    <li>Amazon Dashboard for decision making</li>
+  </ul>
+</div>
+
+<div id="skills" class="container">
+  <h2 class="section-title"><i class="fa-solid fa-code"></i> Skills</h2>
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Streamlit</div>
+    <div class="skill">Data Viz</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Problem Solving</div>
+    <div class="skill">Teamwork</div>
+    <div class="skill">C++</div>
+    <div class="skill">Java</div>
+  </div>
+</div>
+
+<div id="contact" class="container">
+  <h2 class="section-title"><i class="fa-solid fa-envelope"></i> Contact</h2>
+  <p><i class="fa-solid fa-envelope"></i> Email: <a href="mailto:issaalsherife@gmail.com" style="color:#00B4D8;">issaalsherife@gmail.com</a></p>
+  <p><i class="fa-solid fa-phone"></i> Phone: +218 92-861-9293</p>
+  <p id="dynamic-message"></p>
+  <div class="buttons-group">
+    <a class="btn" href="https://github.com/issa5883-stack" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/issa-alsherife-b82a7a384/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <a class="btn" href="c:\Users\AG\Downloads\Telegram Desktop\Issa_Elsherife.cv.15.9.25.pdf" target="_blank"><i class="fa-solid fa-file"></i> Download CV</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Issa Elsherife. All rights reserved.
+</footer>
+
+<script>
+  const messages=[
+    "Turning ideas into solutions.",
+    "Building dashboards & chatbots.",
+    "Let's connect!"
+  ];
+  let i=0;
+  function showMessage(){
+    document.getElementById('dynamic-message').textContent=messages[i];
+    i=(i+1)%messages.length;
+  }
+  setInterval(showMessage,3000);
+  showMessage();
+
+  // Scroll Animation
+  const sections=document.querySelectorAll('.container');
+  function checkScroll(){
+    const triggerBottom=window.innerHeight*0.85; 
+    sections.forEach(sec=>{
+      const secTop=sec.getBoundingClientRect().top;
+      if(secTop<triggerBottom){sec.classList.add('show');}
+    });
+  }
+  window.addEventListener('scroll',checkScroll);
+  checkScroll();
+</script>
+
+</body>
+</html>
